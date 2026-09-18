@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyper-agent-os"
+version = "0.1.0"
+description = "Next-Generation Autonomous Agent OS & Swarm Substrate uniting Super-Memory, 24/7 Daemons, Multimodal Streaming, VLA Safety Governors, and Benchmark Evaluators."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Ahmed Hassan", email = "developer@a2zsoc.com"}
+]
+keywords = [
+    "ai-agents",
+    "swarm-intelligence",
+    "graphrag",
+    "bi-temporal-memory",
+    "langgraph",
+    "crewai",
+    "vla",
+    "control-barrier-functions",
+    "swe-bench",
+    "mle-bench"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+orchestration = [
+    "langgraph>=0.2.0",
+    "crewai>=0.80.0",
+    "pydantic>=2.7.0"
+]
+
+[project.scripts]
+hyper-os = "hyper_agent_os.cli:main"

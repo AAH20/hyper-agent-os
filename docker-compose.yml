@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  hyper-agent-os:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hyper-agent-os-core
+    environment:
+      - PYTHONUNBUFFERED=1
+      - HYPER_OS_ENV=production
+    volumes:
+      - hyper-memory-data:/app/data
+    restart: unless-stopped
+    command: ["daemon"]
+
+volumes:
+  hyper-memory-data:
+    driver: local
